@@ -8,9 +8,9 @@ def index():
   return ('/flashing')
 
 
-@app.route('/flashing')
-def flasing():
-  flash('Sucesso', 'success')
+@app.route('/hello/<name>')
+def flasing(name):
+  flash(f'Bem-vindo, {name}!', 'info')
   return render_template('index.html')
   
 
